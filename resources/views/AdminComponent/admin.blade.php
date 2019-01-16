@@ -8,6 +8,9 @@
         <div class="col-12">
             admin probando cambios
         </div>
+         <div class="col-12">
+            admin probando cambios
+        </div>
     </div>
 </div>
 
