@@ -6,7 +6,7 @@
 <div class="container">
     <div class="row">
         <div class="col-12">
-            admin probando cambios
+            admin probando cambios animal 
         </div>
     </div>
 </div>
