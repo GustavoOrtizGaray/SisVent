@@ -5,7 +5,7 @@
 @section('body')
 <div class="container">
     <div class="row justify-content-center align-items-center min-100">
-        <div class="col-6">
+        <div class="col-10">
         	<div class="row text-center">
         		<div class="col-12">
         			<div class="container bg-light border">
@@ -19,23 +19,24 @@
     						<h1>SisVent</h1> 
     					</div>
     					<!--formulario para iniciar sesión-->
-	        			<div class="jumbotrom">
+	        			<div class="col-12 jumbotrom">
 	        				<form>
-	        					<div class="form-group">
-	        						<div class="input-group mb-3">
+	        					<div class="row">
+	        						<div class="col-5 input-group mb-3">
 									    <div class="input-group-prepend">
 									      <span class="input-group-text">Correo</span>
 									    </div>
 									    <input type="text" class="form-control" placeholder="Ejemplo@ejemplo.com">
-									  </div>
-			        				<div class="input-group mb-3">
+									 </div>
+			        				<div class="col-5 input-group mb-3">
 			        					 <div class="input-group-prepend">
 									      <span class="input-group-text">Contraseña</span>
 									    </div>
-									    <input type="text" class="form-control" placeholder="contraseña">
-									    
-									  </div>
-									  <button type="button" class="btn btn-primary">Iniciar</button>
+									    <input type="password" class="form-control" placeholder="contraseña">
+									 </div>
+									 <div class="col-2 input-group mb-3">
+									 	<button type="button" class="btn btn-primary">Iniciar</button>
+									 </div>
 	        					</div>
 	        				</form>
 	        			</div>
