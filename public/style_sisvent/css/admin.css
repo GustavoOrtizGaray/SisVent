@@ -1,3 +1,147 @@
-body{
-	background: blue;
+.posicion-header{
+	position: fixed;
+    z-index: 1;
+    width: 100%;
+}
+
+.posicion-footer{
+	position: fixed;
+    bottom: 0px;
+    z-index: 2;
+    width: 100%;
+}
+
+
+.elimia-padding{
+	padding: 0px !important; 
+}
+
+.elimia-margin{
+	margin: 0px !important; 
+}
+
+.img-power-up{
+	font-size: 1.5em;
+	color: #fff;
+	padding: 10px; 
+}
+
+.img-usuarios{
+	font-size: 1.5em;
+	color: #fff;
+	position: relative;
+    top: 10px;
+}
+
+
+.img-home{
+	font-size: 1.5em;
+	color: #fff;
+	padding: 10px; 
+}
+
+.max-width{
+	width: 100% !important;
+}
+
+.border-body{
+	border-left: 15px solid #fff;
+}
+
+.color-cuerpo{
+	background: #ececec;
+}
+
+.color-contCuerpo{
+	background: #f7fff1;
+}
+
+.lista-circulo{
+	width: 20px;
+	height: 20px;
+    top: 3px;
+    position: relative;
+    left: -10px;
+}
+
+.color-grafico{
+	height: 100px;
+	background: #f7fff1;
+}
+
+.font-size{
+	font-size: 12px;
+}
+
+
+
+.live__scroll {
+  overflow-x: auto;
+  overflow-y: hidden;
+  white-space: nowrap;
+  margin: 3px;
+}
+.live__scroll .row{
+  display:block;
+}
+.live__scroll .live__scroll--box {
+  display: inline-block;
+  float: none;
+  padding: 15px;
+}
+
+
+
+
+@media screen and (max-width:1198px) and (min-width:720px) {
+   .border-body{
+	border-left: 0px;
+   }
+
+   .border-body-res{
+	border-left: 15px solid #fff;
+   }
+
+   .img-usuarios{
+   	top: 1px;
+   }
+
+}
+
+
+@media screen and (max-width:760px) and (min-width:0px) {
+
+
+   .border-body-res{
+	border-left: 0px solid #fff;
+   }
+
+   .border-body{
+	 border-left: 0px;
+ 	}
+
+ 	.letra_res{
+ 	 font-size: 12px;		
+ 	}
+	 
+	.padind-res{
+	 padding-bottom: 100px !important;
+	}  
+
+	.img-usuarios{
+   	top: 1px;
+   }
+
+}
+
+@media only screen and (max-width: 576px) {
+  .eliminar{
+  	display: none
+  }
+
+  .img-home{
+	position: relative;
+	left: -15px;
+}
+
 }

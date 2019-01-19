@@ -3,12 +3,19 @@
 <link rel="stylesheet" type="text/css" href="{{ asset('style_sisvent/css/admin.css') }}">
 @endsection
 @section('body')
-<div class="container">
-    <div class="row">
-        <div class="col-12">
-            admin probando cambios animal 
-        </div>
-    </div>
-</div>
+
+	<!-- Header -->
+	@include("AdminComponent.headerAdmin")
+
+	<!-- Cuerpo -->
+	<div class="container pt-5">
+		@include('AdminComponent.bodyAdmin')
+	</div>
+	<!-- pie de pagina -->
+		@include('AdminComponent.footerAdmin')
+
+
+   
+
 
 @endsection
