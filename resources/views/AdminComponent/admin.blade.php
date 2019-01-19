@@ -3,7 +3,6 @@
 <link rel="stylesheet" type="text/css" href="{{ asset('style_sisvent/css/admin.css') }}">
 @endsection
 @section('body')
-
 	<!-- Header -->
 	@include("AdminComponent.headerAdmin")
 
@@ -13,9 +12,5 @@
 	</div>
 	<!-- pie de pagina -->
 		@include('AdminComponent.footerAdmin')
-
-
-   
-
 
 @endsection
