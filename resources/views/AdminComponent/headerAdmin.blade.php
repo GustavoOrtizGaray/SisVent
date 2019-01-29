@@ -48,7 +48,7 @@
 			</button>
 	  		<div class="collapse navbar-collapse" id="navbarSupportedContent">
 			    <ul class="navbar-nav mr-auto justify-content-around max-width">
-			      <li class="nav-item active">
+			      <li class="nav-item">
 			        <a class="nav-link cont-img-header hover-item" href="#" title="USUARIOS">  			        	
 			        	<img src="{{ asset('img_sist/botones/usuarios.png') }}"> 
 			        	<label class="text-white"> Usuarios</label>
