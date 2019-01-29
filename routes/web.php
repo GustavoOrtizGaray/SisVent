@@ -17,12 +17,18 @@ Route::get('/', function () {
 Route::get('/login',function () {
     return view('LoginComponent/login');
 });
-Route::get('/admin',function () {
-    return view('AdminComponent/admin');
-});
+
+
+
+Route::get('/admin', 'adminHome@index');
+
+
+
 Route::get('/sales',function () {
     return view('SalesComponent/sales');
 });
 Route::get('/storehouse',function () {
     return view('StorehouseComponent/storehouse');
 });
+
+
