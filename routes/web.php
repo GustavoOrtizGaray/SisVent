@@ -18,9 +18,7 @@ Route::get('/login',function () {
     return view('LoginComponent/login');
 });
 //rutas del admin
-Route::get('/admin',function () {
-    return view('AdminComponent/admin');
-});
+Route::get('/admin', 'adminHome@index');
 Route::get('/admin/user','adminUser@index');
 Route::get('/admin/product','adminProduct@index');
 //fin rutas del admin

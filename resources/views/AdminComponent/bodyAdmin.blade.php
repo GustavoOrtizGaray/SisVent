@@ -7,7 +7,7 @@
 			<div class="row">
 				<div class="col-12 mt-3 color-cuerpo">
 					<p class="text-secondary">MONTO TOTAL DE VENTA: </p>
-					<p class="text-secondary"> <h1 class="text-center">  <strong> S/. 253 </strong>  </h1> </p>
+					<p class="text-secondary"> <h1 class="text-center">  <strong> S/. {{$totalVentas}} </strong>  </h1> </p>
 					<p class="text-secondary">Ir a ventas y facturación</p>
 				</div>
 
@@ -27,14 +27,28 @@
 
 					</div>
 
-					<div class="container color-contCuerpo p-4">
-						@for ($i = 0; $i < 10; $i++)
-						   <div class="bg-secondary rounded mb-2 row">						  
-							  <div class="col-10 text-white">Arroz</div>
-							  <div class="col-2"> <span class="badge bg-success badge-pill rounded-circle lista-circulo "> </span>
+					<div class="container color-contCuerpo p-4 height-productos" id="resultadoB">
+
+						@foreach($productos as $producto)
+						    
+						    <div class="bg-secondary rounded mb-2 row" >						  
+							  <div class="col-10 text-white" >{{$producto["nombre"] }}</div>
+
+							  @if($producto["cantidad"] > $producto["stockMinimo"])
+							  	@php ($claseStock = "bg-warning")
+							  @elseif($producto["cantidad"] == 0)
+							  	@php ($claseStock = "bg-danger")
+							  @else
+							  	@php ($claseStock = "bg-success")
+							  @endif	
+
+							  <div class="col-2"> <span class=" {{$claseStock}} badge  badge-pill rounded-circle lista-circulo "> </span>
 							  </div>
 							</div>
-						@endfor			
+
+						 @endforeach
+
+						
 					</div>
 					<p class="text-secondary"> Ir a productos: </p>
 				</div>
@@ -48,32 +62,38 @@
 						<div class="col-12 col-md-12 col-xl-8 color-cuerpo testimonial-group"> 
 							<p class="text-secondary"> GRAFICO DE VENTAS:  </p>
 							<div class="row pl-2 pb-2 pr-2 live__scroll">
-							  <div class="row text-center">
-							    <div class="col-3 color-grafico border-right live__scroll--box">Grafico 1</div>
-							    <div class="col-3 color-grafico border-right live__scroll--box">Grafico 2</div>
-							    <div class="col-3 color-grafico border-right live__scroll--box">Grafico 3</div>
-							    <div class="col-3 color-grafico border-right live__scroll--box">Grafico 4</div>
-							    <div class="col-3 color-grafico border-right live__scroll--box">Grafico 5</div>
-							    <div class="col-3 color-grafico border-right live__scroll--box">Grafico 6</div>
-							    <div class="col-3 color-grafico border-right live__scroll--box">Grafico 7</div>
+							  <div class="row">
+							    <div class="col-3 color-grafico border-right live__scroll--box">
+							    	<canvas id="myChart0"></canvas>
+								</div>
+								<div class="col-3 color-grafico border-right live__scroll--box">
+							    	<canvas id="myChart1"></canvas>
+								</div>
+								<div class="col-3 color-grafico border-right live__scroll--box">
+							    	<canvas id="myChart2"></canvas>
+								</div>
 								</div>
 							</div>					
 						</div>
 
-						<div class="col-12 col-md-12 col-xl-4 border-body color-cuerpo"> 
+						<div class="col-12 col-md-12 col-xl-4 border-body color-cuerpo scrollbar-usuFrec"> 
 							<span class="text-secondary"> USUARIOS FRECUENTES:  </span>
 							<div class="container">
-								@for ($i = 0; $i < 2; $i++)
-								   <div class="bg-info rounded-2 rounded mb-2 row">						  
+
+								@foreach ($usuFrecuentes as $usuFrecuente)
+									<div class="bg-info rounded-2 rounded mb-2 row">						  
 									  <div class="col-2 text-white">									  	
 									  	<i class="fas fas fa-user-circle img-usuarios"></i>
 									  </div>
 									  <div class="col-10 text-white"> 
-									  	<span> Rosa Garcia </span>
-									  	<span>Ultima Compra: 00/12/1234 </span>
+									  	<span> {{$usuFrecuente['nombre']}} </span> <br>
+									  	<span class="font-11">Ultima Compra: {{$usuFrecuente['fechaCompra']}} </span>
 									  </div>
 									</div>
-								@endfor									
+								@endforeach
+
+
+															
 							</div>
 							<span class="text-secondary"> Ir a Usuarios  </span>
 						</div>
@@ -87,7 +107,7 @@
 							  <div class="form-group row">
 							    <label for="colFormLabelSm" class="col-sm-2 col-form-label col-form-label-sm">Desde:</label>
 							    <div class="col-sm-10">
-							      <input type="date" class="form-control form-control-sm" id="colFormLabelSm" placeholder="col-form-label-sm">
+							      <input type="date" class="form-control form-control-sm" id="productoDesde" placeholder="col-form-label-sm">
 							    </div>
 							  </div>						
 							</form>
@@ -98,28 +118,29 @@
 							  <div class="form-group row">
 							    <label for="colFormLabelSm" class="col-sm-2 col-form-label col-form-label-sm">Hasta:</label>
 							    <div class="col-sm-10">
-							      <input type="date" class="form-control form-control-sm" id="colFormLabelSm" placeholder="col-form-label-sm">
+							      <input type="date" class="form-control form-control-sm" id="productoHasta" placeholder="col-form-label-sm">
 							    </div>
 							  </div>						
 							</form>
 						</div>
 					</div>
 
-					<div class="container color-contCuerpo p-4">
+					<div class="container color-contCuerpo">
 						<div class="row letra_res">
 							<div class="col-5 col-md-6 col-lg-6 text-secondary">NOMBRE PRODUCTO</div>
 							<div class="col-4 col-md-3 col-lg-4 text-secondary">FECHA</div>
 							<div class="col-3 col-md-3 col-lg-2 text-secondary">MONTO</div>	
 						</div>
 
-						@for ($i = 0; $i < 8; $i++)
+					</div>
+					<div class="container color-contCuerpo height-productos p-4">	
+						@foreach($productosVendidos as $productosVendido)
 							<div class="row bg-secondary rounded mb-2 letra_res">
-								<div class="col-5 col-md-6 col-lg-6 text-white">Papel Bond</div>
-								<div class="col-4 col-md-3 col-lg-4 text-white">07/01/2018</div>
-								<div class="col-3 col-md-3 col-lg-2 text-white">S/. 10.00</div>	
-							</div>	  									
-						@endfor	
-
+								<div class="col-5 col-md-6 col-lg-6 text-white"> {{$productosVendido["nombre"]}} </div>
+								<div class="col-4 col-md-3 col-lg-4 text-white">{{$productosVendido["fechaCompra"]}}</div>
+								<div class="col-3 col-md-3 col-lg-2 text-white">S/. {{$productosVendido["contoCompra"]}}</div>	
+							</div>	  
+						@endforeach						
 					</div>
 
 				</div>
