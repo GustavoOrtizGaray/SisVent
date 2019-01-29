@@ -32,8 +32,8 @@
 		  			</div>	
 
 	  			</div>	
-	  			<div class="col-7 col-lg-3 col-md-4 col-sm-4 bg-dark text-cente mx-auto">
-					<a href="#" title="HOME">
+	  			<div class="col-7 col-lg-3 col-md-4 col-sm-4 {{ isset($itemHome) ? $itemHome:"" }} text-cente mx-auto">
+					<a href="/admin" title="HOME">
 			  	 	 <i class="fas fa-home img-home"></i>
 			  		</a>
 	  			</div>	
@@ -48,41 +48,44 @@
 			</button>
 	  		<div class="collapse navbar-collapse" id="navbarSupportedContent">
 			    <ul class="navbar-nav mr-auto justify-content-around max-width">
-			      <li class="nav-item">
-			        <a class="nav-link cont-img-header hover-item" href="#" title="USUARIOS">  			        	
+
+
+			      <li class="nav-item {{ isset($itemUser) ? $itemUser:"" }}">
+			        <a class="nav-link cont-img-header hover-item" href="/admin/user" title="USUARIOS">  			        	
+
 			        	<img src="{{ asset('img_sist/botones/usuarios.png') }}"> 
 			        	<label class="text-white"> Usuarios</label>
 			        </a>
 			      </li>			    
-			      <li class="nav-item">
-			        <a class="nav-link cont-img-header hover-item" href="#" title="PRODUCTOS">
+			      <li class="nav-item {{ isset($itemProduct) ? $itemProduct:"" }}">
+			        <a class="nav-link cont-img-header hover-item" href="/admin/product" title="PRODUCTOS">
 			        	<img src="{{ asset('img_sist/botones/productos.png') }}">
 			        	<label class="text-white"> Productos</label>
 			        </a>
 			        	
 			      </li>
-			      <li class="nav-item">
+			      <li class="nav-item {{ isset($itemCategory) ? $itemCategory:"" }}">
 			        <a class="nav-link cont-img-header hover-item" href="#" title="CATEGORIAS">
 			        	<img src="{{ asset('img_sist/botones/categorias.png') }}">
 			        	<label class="text-white"> Categorias</label>
 			        </a>
 			        	
 			      </li>
-			      <li class="nav-item">
+			      <li class="nav-item {{ isset($itemEstablishment) ? $itemEstablishment:"" }}">
 			        <a class="nav-link cont-img-header hover-item" href="#" title="ESTABLECIMIENTOS">
 			        	<img src="{{ asset('img_sist/botones/establecimientos.png') }}">
 			        	<label class="text-white"> Establecimientos</label>
 			        </a>
 			        	
 			      </li>
-			      <li class="nav-item">
+			      <li class="nav-item {{ isset($itemBilling) ? $itemBilling:"" }}">
 			        <a class="nav-link cont-img-header hover-item" href="#" title="FACTURACION">
 			        	<img src="{{ asset('img_sist/botones/facturacion.png') }}">
 			        	<label class="text-white"> Facturacion</label>	
 			        </a>
 			        	
 			      </li>
-			     <li class="nav-item">
+			     <li class="nav-item {{ isset($itemWeb) ? $itemWeb:"" }}">
 			        <a class="nav-link cont-img-header hover-item" href="#" title="PAGINA WEB">
 			        	<img src="{{ asset('img_sist/botones/pagina_web.png') }}">
 			        	<label class="text-white"> Pagina Web</label>
@@ -90,7 +93,7 @@
 			        	
 			     </li>
 
-			     <li class="nav-item">
+			     <li class="nav-item {{ isset($itemSecurity) ? $itemSecurity:"" }}">
 			        <a class="nav-link cont-img-header hover-item" href="#" title="SEGURIDAD">
 			        	<img src="{{ asset('img_sist/botones/seguridad.png') }}">
 			        	<label class="text-white"> Seguridad</label>
@@ -112,7 +115,6 @@
 
 	  	</div>
 
-
 		  <div class="col-1 row d-block">
 		  		<div class="bg-warning float-right"> 
 		  			<a href="#" class="bg-warning"> 
@@ -123,4 +125,3 @@
 
 	</div>	
 </nav>
-
