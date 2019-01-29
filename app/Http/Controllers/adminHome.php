@@ -15,7 +15,8 @@ class adminHome extends Controller{
    		   ->with('totalVentas',$this->totalVentas())
    		   ->with('productos',$this->productos())
    		   ->with('usuFrecuentes',$this->usuFrecuentes())
-   		   ->with('productosVendidos',$this->productosVendidos());
+   		   ->with('productosVendidos',$this->productosVendidos())
+            ->with('itemHome','bg-dark');
    }	
 
 

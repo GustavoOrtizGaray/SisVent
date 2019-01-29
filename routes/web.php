@@ -21,6 +21,8 @@ Route::get('/login',function () {
 Route::get('/admin', 'adminHome@index');
 Route::get('/admin/user','adminUser@index');
 Route::get('/admin/product','adminProduct@index');
+
+
 //fin rutas del admin
 Route::get('/sales',function () {
     return view('SalesComponent/sales');

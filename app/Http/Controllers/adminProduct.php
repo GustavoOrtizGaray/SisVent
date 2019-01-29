@@ -9,8 +9,28 @@ class adminProduct extends Controller
     public function index(){
     	return view('AdminComponent/adminProduct')->with('typesAccount',$this->typeAccount())
     										   ->with('statesAccount',$this->stateAccount())
-    										   ->with('usersList',$this->userList());
+    										   ->with('usersList',$this->userList())
+                                               ->with('cuentas',$this->cuentas())
+                                               ->with('activo',$this->activo())
+                                               ->with('usuario',$this->usuario())
+                                               ->with('itemProduct','bg-dark');
     }
+     private function usuario(){
+        $usuario = [
+            'nombre' => 'Juan Carlos',
+            'email' => 'juanCarlos@gmail.com',
+            'password' => "123456"
+        ];
+        return ($usuario);  
+       }
+        private function cuentas(){
+        $cuentas = ["Administrador", "Vendedor", "Almacenero", "Cliente"];
+        return($cuentas);
+       }
+       private function activo(){
+        $activo = "Administrador";
+        return($activo);
+       }
      private function typeAccount(){
     	
     	$tipos=[

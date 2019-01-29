@@ -12,9 +12,33 @@ class adminUser extends Controller
     	return view('AdminComponent/adminUser')->with('typesAccount',$this->typeAccount())
     										   ->with('statesAccount',$this->stateAccount())
     										   ->with('users',$this->userList())
-                                               ->with('listsEstablishments',$this->listEstablishments());
+                                               ->with('listsEstablishments',$this->listEstablishments())
+                                               ->with('cuentas',$this->cuentas())
+                                               ->with('activo',$this->activo())
+                                               ->with('usuario',$this->usuario())
+                                               ->with('itemUser','bg-dark');
     }
-    
+
+
+
+
+
+    private function usuario(){
+    $usuario = [
+        'nombre' => 'Juan Carlos',
+        'email' => 'juanCarlos@gmail.com',
+        'password' => "123456"
+    ];
+    return ($usuario);  
+   }
+    private function cuentas(){
+    $cuentas = ["Administrador", "Vendedor", "Almacenero", "Cliente"];
+    return($cuentas);
+   }
+   private function activo(){
+    $activo = "Administrador";
+    return($activo);
+   }
     private function listEstablishments(){
         
         $tipos=[
