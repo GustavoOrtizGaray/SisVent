@@ -89,9 +89,22 @@
   float: none;
   padding: 15px;
 }
-
-
-
+/*Style Admin - User*/
+.ad-us-btn-search{
+	background: #fff; 
+	border-right: 1px solid #ced4da;
+	border-top: 1px solid #ced4da;
+	border-bottom: 1px solid #ced4da;;
+}
+.ad-us-border-div{
+	border: solid 1px;
+	border-radius: 5px;
+}
+.ad-us-input{
+	border:0;
+	border-bottom: 1px solid #28a745;
+}
+/*fin style admin-user*/
 
 @media screen and (max-width:1198px) and (min-width:720px) {
    .border-body{

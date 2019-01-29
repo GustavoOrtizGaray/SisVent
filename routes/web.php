@@ -17,12 +17,19 @@ Route::get('/', function () {
 Route::get('/login',function () {
     return view('LoginComponent/login');
 });
+//rutas del admin
 Route::get('/admin',function () {
     return view('AdminComponent/admin');
 });
+Route::get('/admin/user','adminUser@index');
+Route::get('/admin/product','adminProduct@index');
+//fin rutas del admin
 Route::get('/sales',function () {
     return view('SalesComponent/sales');
 });
 Route::get('/storehouse',function () {
     return view('StorehouseComponent/storehouse');
+});
+Route::get('/term',function () {
+    return view('RelevantPages/termsconditions');
 });
