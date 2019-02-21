@@ -99,7 +99,7 @@
 .lista-circulo{
 	width: 20px;
 	height: 20px;
-    top: 3px;
+    top: 10px;
     position: relative;
     left: -10px;
 }
@@ -146,7 +146,34 @@
 	border-bottom: 1px solid #28a745;
 }
 /*fin style admin-user*/
+/*Style admin - product*/
+.ad-pr-item{
+	cursor:pointer;
+}
+.ad-pr-item-active{
+	background: #007bff !important;
+}
+.ad-pr-item:hover{
+	background: #007bff !important;
+}
+/*fin Style admin - product*/
 
+/* Style admin-stablishment*/
+.ad-st-item{
+	cursor:pointer;
+}
+.ad-st-item-active{
+	background: #007bff !important;
+}
+.ad-st-item:hover{
+	background: #007bff !important;
+}
+.ad-st-circle-indicator{
+	width: 21px;
+	height: 21px;
+	text-align: center;
+}
+/* fin Style admin-stablishment*/
 @media screen and (max-width:1198px) and (min-width:720px) {
    .border-body{
 	border-left: 0px;
