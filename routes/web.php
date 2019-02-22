@@ -21,7 +21,11 @@ Route::get('/login',function () {
 Route::get('/admin', 'adminHome@index');
 Route::get('/admin/user','adminUser@index');
 Route::get('/admin/product','adminProduct@index');
+Route::get('/admin/cate','adminCategory@index');
+Route::get('/admin/factura', 'adminBilling@index');
 
+//rutas categorias
+Route::get('/admin/cate/{id}','adminCategory@categorias');
 
 //fin rutas del admin
 Route::get('/sales',function () {
