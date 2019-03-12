@@ -49,7 +49,7 @@ class adminStablishment extends Controller
                 'address'=>'Dirección Dirección Dirección',
                 'state'=>'1',
                 'typeStablishment'=>'2.00',
-                'RUC'=>'123456789'
+                'RUC'=>'123456789',
                 'businessName'=>'Nueva Empresa'
             ];
         }
