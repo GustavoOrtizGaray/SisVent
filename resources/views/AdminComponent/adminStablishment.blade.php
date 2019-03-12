@@ -8,14 +8,13 @@
 
 	<!-- Cuerpo -->
 	<div class="container pt-5">
-		@include('AdminComponent.bodyAdmin')
+		@include('AdminComponent.bodyStablishment')
 	</div>
 	<!-- pie de pagina -->
-	@include('AdminComponent.footerAdmin')
+		@include('AdminComponent.footerAdmin')
 
 @endsection
 
-
 @section('jsAdmin')
-<script type="text/javascript" src="{{ asset('js/adminHome.js') }}" ></script>
+<script type="text/javascript" src="{{ asset('js/stablishmentAdmin.js') }}" ></script>
 @endsection

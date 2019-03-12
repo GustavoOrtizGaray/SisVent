@@ -14,3 +14,7 @@
 		@include('AdminComponent.footerAdmin')
 
 @endsection
+
+@section('jsAdmin')
+<script type="text/javascript" src="{{ asset('js/usersAdmin.js') }}" ></script>
+@endsection

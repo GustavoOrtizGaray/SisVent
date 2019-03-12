@@ -72,7 +72,7 @@
 			        	
 			      </li>
 			      <li class="nav-item {{ isset($itemEstablishment) ? $itemEstablishment:"" }}">
-			        <a class="nav-link cont-img-header hover-item" href="#" title="ESTABLECIMIENTOS">
+			        <a class="nav-link cont-img-header hover-item" href="/admin/stablisment" title="ESTABLECIMIENTOS">
 			        	<img src="{{ asset('img_sist/botones/establecimientos.png') }}">
 			        	<label class="text-white"> Establecimientos</label>
 			        </a>
