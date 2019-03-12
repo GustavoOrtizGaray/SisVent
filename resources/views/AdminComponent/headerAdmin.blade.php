@@ -3,7 +3,7 @@
 
 		<div class="col-6 col-sm-5 col-md-4 col-lg-3">
 	  		<div class="row"> 
-	  			<div class="col-4 col-lg-9 col-md-8 col-sm-8">	  				
+	  			<div class="col-4 col-lg-9 col-md-9 col-sm-8">	  				
 		  			
 		  			<div class="row">
 		  				<div class="col-3">
@@ -32,7 +32,7 @@
 		  			</div>	
 
 	  			</div>	
-	  			<div class="col-7 col-lg-3 col-md-4 col-sm-4 {{ isset($itemHome) ? $itemHome:"" }} text-cente mx-auto">
+	  			<div class="col-7 col-lg-3 col-md-3 col-sm-4 {{ isset($itemHome) ? $itemHome:"" }} text-cente mx-auto">
 					<a href="/admin" title="HOME">
 			  	 	 <i class="fas fa-home img-home"></i>
 			  		</a>
@@ -48,8 +48,11 @@
 			</button>
 	  		<div class="collapse navbar-collapse" id="navbarSupportedContent">
 			    <ul class="navbar-nav mr-auto justify-content-around max-width">
+
+
 			      <li class="nav-item {{ isset($itemUser) ? $itemUser:"" }}">
 			        <a class="nav-link cont-img-header hover-item" href="/admin/user" title="USUARIOS">  			        	
+
 			        	<img src="{{ asset('img_sist/botones/usuarios.png') }}"> 
 			        	<label class="text-white"> Usuarios</label>
 			        </a>
@@ -62,7 +65,7 @@
 			        	
 			      </li>
 			      <li class="nav-item {{ isset($itemCategory) ? $itemCategory:"" }}">
-			        <a class="nav-link cont-img-header hover-item" href="#" title="CATEGORIAS">
+			        <a class="nav-link cont-img-header hover-item" href="/admin/cate" title="CATEGORIAS">
 			        	<img src="{{ asset('img_sist/botones/categorias.png') }}">
 			        	<label class="text-white"> Categorias</label>
 			        </a>
@@ -76,7 +79,7 @@
 			        	
 			      </li>
 			      <li class="nav-item {{ isset($itemBilling) ? $itemBilling:"" }}">
-			        <a class="nav-link cont-img-header hover-item" href="#" title="FACTURACION">
+			        <a class="nav-link cont-img-header hover-item" href="/admin/factura" title="FACTURACION">
 			        	<img src="{{ asset('img_sist/botones/facturacion.png') }}">
 			        	<label class="text-white"> Facturacion</label>	
 			        </a>

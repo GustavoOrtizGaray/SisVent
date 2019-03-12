@@ -12,6 +12,7 @@
                     </div>
                     <div id="resultadoB" class="container color-contCuerpo p-4" style="height: 300px; overflow: auto;">
                     	@foreach( $users as $user)
+                    		<div>
                     		<div class="bg-info rounded mb-2 row ad-us-item" id="{{$user['id']}}" style="cursor: pointer;">
 			   		            <div class="col-2 p-1">
 			   	                    <i class="fas fa-user-circle img-power-up pl-0"></i>
@@ -62,6 +63,7 @@
 				                	
 				                </div>
 				            </div>
+				           </div> 
                     	@endforeach
 	
 					</div>

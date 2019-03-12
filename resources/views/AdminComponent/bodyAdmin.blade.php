@@ -29,8 +29,8 @@
 
 					<div class="container color-contCuerpo p-4 height-productos" id="resultadoB">
 
-						@foreach($productos as $producto)
-						    
+						@foreach($productos as $producto)	
+						<div>					    
 						    <div class="bg-secondary rounded mb-2 row" >						  
 							  <div class="col-10 text-white" >{{$producto["nombre"] }}</div>
 
@@ -45,7 +45,7 @@
 							  <div class="col-2"> <span class=" {{$claseStock}} badge  badge-pill rounded-circle lista-circulo "> </span>
 							  </div>
 							</div>
-
+						</div>	
 						 @endforeach
 
 						
@@ -64,13 +64,13 @@
 							<div class="row pl-2 pb-2 pr-2 live__scroll">
 							  <div class="row">
 							    <div class="col-3 color-grafico border-right live__scroll--box">
-							    	<canvas id="myChart0"></canvas>
+							    	<canvas id="myChart-0"></canvas>
 								</div>
 								<div class="col-3 color-grafico border-right live__scroll--box">
-							    	<canvas id="myChart1"></canvas>
+							    	<canvas id="myChart-1"></canvas>
 								</div>
 								<div class="col-3 color-grafico border-right live__scroll--box">
-							    	<canvas id="myChart2"></canvas>
+							    	<canvas id="myChart-2"></canvas>
 								</div>
 								</div>
 							</div>					

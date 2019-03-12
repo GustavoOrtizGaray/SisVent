@@ -11,11 +11,11 @@
 		@include('AdminComponent.bodyAdmin')
 	</div>
 	<!-- pie de pagina -->
-		@include('AdminComponent.footerAdmin')
+	@include('AdminComponent.footerAdmin')
 
 @endsection
 
 
 @section('jsAdmin')
-<script type="text/javascript" src="{{ asset('js/userAdmin.js') }}" ></script>
+<script type="text/javascript" src="{{ asset('js/adminHome.js') }}" ></script>
 @endsection

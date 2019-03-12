@@ -12,14 +12,16 @@
                     </div>
                     <div id="resultadoB" class="container color-contCuerpo p-4" style="height: 300px; overflow: auto;">
                      	@foreach($stablishmentList as $stablishment)
+                     	<div>
                      		<div class="ad-st-item bg-secondary rounded row mb-3" id="{!! $stablishment['id'] !!}">
+                     		
                      		<div class="col-2 p-1">
                      			<img src="{!! asset('img_sist/botones/establecimientos.png') !!}">
                      		</div>
                      		<div class="col-10 text-white ml-auto">
                      			<div class="row">
                      				<div class="col-12 row ml-0 p-0">
-                     					<div class="col-8 ">
+                     					<div class="col-8 nameSta">
                      						{!! $stablishment['name'] !!}
                      					</div>
                      					<div class="col-4">
@@ -63,7 +65,9 @@
                      				</div>
                      			</div>
                      		</div>
+                     		
                      	</div>
+                     </div>	
                      	@endforeach
                     </div>	
 				</div>

@@ -16,5 +16,5 @@
 @endsection
 
 @section('jsAdmin')
-<script type="text/javascript" src="{{ asset('js/userAdmin.js') }}" ></script>
+<script type="text/javascript" src="{{ asset('js/usersAdmin.js') }}" ></script>
 @endsection

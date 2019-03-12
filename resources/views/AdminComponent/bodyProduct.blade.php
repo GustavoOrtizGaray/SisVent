@@ -21,6 +21,7 @@
                     </div>
                     <div id="resultadoB" class="container color-contCuerpo p-4" style="height: 300px; overflow: auto;">
 						@foreach( $productList as $product)
+							<div>
 							<div class="ad-pr-item bg-secondary rounded mb-2 row" id="{{$product['id']}}" date-cat="{!! $product['typeCategory'] !!}">	  
 				                <div class="col-10 text-white mt-2">{!! $product['name'] !!}</div>
 				                <div class="col-2">
@@ -36,6 +37,7 @@
 				                    		@break
 				                    @endswitch
 				                </div>
+				            </div>
 				            </div>
 						@endforeach
 					</div>

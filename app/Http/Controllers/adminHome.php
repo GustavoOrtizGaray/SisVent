@@ -58,6 +58,14 @@ class adminHome extends Controller{
    		"nombre" => "Inyecciones","estado" => 1,"precio" => 1.5,"cantidad" => 10,"stockMaximo" => 60,
    		"stockMinimo" => 5
    	],
+      [
+         "nombre" => "Inyecciones","estado" => 1,"precio" => 1.5,"cantidad" => 10,"stockMaximo" => 60,
+         "stockMinimo" => 5
+      ],
+      [
+         "nombre" => "Inyecciones","estado" => 1,"precio" => 1.5,"cantidad" => 10,"stockMaximo" => 60,
+         "stockMinimo" => 5
+      ],
    	[
    		"nombre" => "Juguetes para perros",	"estado" => 1,"precio" => 1.5,"cantidad" => 0,"stockMaximo" => 60,
    		"stockMinimo" => 20
