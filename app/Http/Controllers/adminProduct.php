@@ -26,10 +26,7 @@ class adminProduct extends Controller
         ];
         return ($usuario);  
     }
-    private function cuentas(){
-        $cuentas = ["Administrador", "Vendedor", "Almacenero", "Cliente"];
-        return($cuentas);
-    }
+    
     private function activo(){
         $activo = "Administrador";
         return($activo);

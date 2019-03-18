@@ -1,5 +1,5 @@
 
-var partUrl = "http://127.0.0.1:8000/";
+var partUrl = "http://sisvent.pe/";
 class Ventanas {
 
 	 searchKey(buscador){
@@ -32,6 +32,22 @@ class Ventanas {
             });
         }
         // fin Filtro
+    }
+    searchAttr(buscador, ficha,atrib){
+        //  Buscador por letras
+        (function ($) {
+            $('#'+buscador).keyup(function () {
+                var rex = new RegExp($(this).val(),'i');
+                $('.'+ficha).hide();
+                $('.'+ficha).filter(function () {   
+                    if (rex.test($(this).attr(atrib))) {
+                      return $(this);
+                    }
+
+                }).show();
+            })
+        }($));
+        // Fin buscador
     }
 
     graficos(idgrafico){
@@ -102,7 +118,9 @@ class Ventanas {
 
 
   recuperarDatos(id,url,callback){
+
     url = partUrl+url;
+
     $.ajax({
         url: url+"/"+id,
         success: function(result){

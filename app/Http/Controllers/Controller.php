@@ -10,4 +10,12 @@ use Illuminate\Foundation\Auth\Access\AuthorizesRequests;
 class Controller extends BaseController
 {
     use AuthorizesRequests, DispatchesJobs, ValidatesRequests;
+
+    public function cuentas(){
+   		$cuentas = [["url"=>"/admin","cuenta"=>"Administrador"],
+   					["url"=>"/sales","cuenta"=>"Vendedor"],
+   					["url"=>"store","cuenta"=>"Almacenero"],
+   					["url"=>"/client","cuenta"=>"Cliente"]];
+   		return($cuentas);
+   }
 }

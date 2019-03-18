@@ -15,12 +15,7 @@ class adminBilling extends Controller{
 
 
 
-	private function cuentas(){
-   	$cuentas = ["Administrador", "Vendedor", "Almacenero", "Cliente"];
-   	return($cuentas);
-   }
-
-    private function activo(){
+	 private function activo(){
    	$activo = "Administrador";
    	return($activo);
    }

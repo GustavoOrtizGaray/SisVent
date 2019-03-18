@@ -29,12 +29,11 @@ Route::get('/admin/factura', 'adminBilling@index');
 Route::get('/admin/product/productdetail/{id}','adminProduct@productList');
 //ruta admin-stablisment
 Route::get('/admin/stablisment','adminStablishment@index');
+Route::get('/admin/stablisment/{id}','adminStablishment@stablishmentList');
 //rutas categorias
 Route::get('/admin/cate/{id}','adminCategory@categorias');
 //rutas ventas
-Route::get('/sales',function () {
-    return view('SalesComponent/sales');
-});
+Route::get('/sales','SalesHome@index');
 //rutas almacenes
 Route::get('/storehouse',function () {
     return view('StorehouseComponent/storehouse');

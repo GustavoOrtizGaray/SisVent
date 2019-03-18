@@ -12,8 +12,8 @@
                     </div>
                     <div id="resultadoB" class="container color-contCuerpo p-4" style="height: 300px; overflow: auto;">
                      	@foreach($stablishmentList as $stablishment)
-                     	<div>
-                     		<div class="ad-st-item bg-secondary rounded row mb-3" id="{!! $stablishment['id'] !!}">
+                     	
+                     	<div class="ad-st-item bg-secondary rounded row mb-3" id="{!! $stablishment['id'] !!}" searchName="{!! $stablishment['name'] !!}">
                      		
                      		<div class="col-2 p-1">
                      			<img src="{!! asset('img_sist/botones/establecimientos.png') !!}">
@@ -67,7 +67,7 @@
                      		</div>
                      		
                      	</div>
-                     </div>	
+                     
                      	@endforeach
                     </div>	
 				</div>
@@ -83,30 +83,30 @@
 								<div class="row">
 									<div class="input-group mb-3">
 										<span class="col-4 text-right">Nombre: </span>
-										<input id="ad-pr-name" class="ad-us-input" type="text" name="">
+										<input id="ad-st-name" class="ad-us-input" type="text" name="">
 									</div>
 									<div class="input-group mb-3">
 										<span class="col-4 text-right">Dirección: </span>
-										<input id="ad-pr-name" class="ad-us-input" type="text" name="">
+										<input id="ad-st-address" class="ad-us-input" type="text" name="">
 									</div>
 									<div class="input-group mb-3">
 										<span class="col-4 text-right">Estado: </span>
-										<input id="ad-pr-name" class="ad-us-input" type="text" name="">
+										<input id="ad-st-state" class="ad-us-input" type="text" name="">
 									</div>
 									<div class="input-group mb-3">
 										<span class="col-4 text-right">Tipo: </span>
-										<input id="ad-pr-name" class="ad-us-input" type="text" name="">
+										<input id="ad-st-type" class="ad-us-input" type="text" name="">
 									</div>
 									
 								</div>
-								<div class="row color-cuerpo">
+								<div class="row color-cuerpo principal">
 									<div class="input-group mb-3 mt-3">
 										<span class="col-4 text-right">Razón Social: </span>
-										<input id="ad-pr-name" class="ad-us-input" type="text" name="">
+										<input id="ad-st-bussiness-name" class="ad-us-input" type="text" name="">
 									</div>
 									<div class="input-group mb-3">
 										<span class="col-4 text-right">RUC: </span>
-										<input id="ad-pr-name" class="ad-us-input" type="text" name="">
+										<input id="ad-st-ruc" class="ad-us-input" type="text" name="">
 									</div>
 								</div>
 							</div>

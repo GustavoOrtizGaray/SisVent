@@ -14,12 +14,6 @@ class adminCategory extends Controller{
 												   ->with('itemCategory','bg-dark');
 	}
 
-    	
-	private function cuentas(){
-   	$cuentas = ["Administrador", "Vendedor", "Almacenero", "Cliente"];
-   	return($cuentas);
-   }
-
 
    private function activo(){
    	$activo = "Administrador";
