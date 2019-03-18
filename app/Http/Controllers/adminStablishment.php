@@ -3,7 +3,7 @@
 namespace SisVent\Http\Controllers;
 
 use Illuminate\Http\Request;
-
+use Illuminate\Support\Collection as Collection;
 class adminStablishment extends Controller
 {
     public function index(){
@@ -13,10 +13,7 @@ class adminStablishment extends Controller
     												   ->with('stablishmentList',$this->stablishmentList('all'))
     												   ->with('itemEstablishment','bg-dark');
     }
-    private function cuentas(){
-        $cuentas = ["Administrador", "Vendedor", "Almacenero", "Cliente"];
-        return($cuentas);
-    }
+    
     private function activo(){
         $activo = "Administrador";
         return($activo);
@@ -45,14 +42,15 @@ class adminStablishment extends Controller
             ];
         }else{
             $tipos=[
-                'name'=>'Establecimiento '.$id,
+                ['name'=>'Establecimiento '.$id,
                 'address'=>'Dirección Dirección Dirección',
                 'state'=>'1',
-                'typeStablishment'=>'2.00',
-                'RUC'=>'123456789',
-                'businessName'=>'Nueva Empresa'
+                'typeStablishment'=>'1',
+                'RUC'=>'123456789',	
+                'businessName'=>'Nueva Empresa']
             ];
         }
-    	return $tipos;
+        $c=Collection::make($tipos);
+    	return $c;
     }
 }

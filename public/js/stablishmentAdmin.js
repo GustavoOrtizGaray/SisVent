@@ -1,47 +1,40 @@
 class Stablishment extends Ventanas {
 
- searchKeySta(buscador){
-        //  Buscador por letras
-        (function ($) {
-            $('#'+buscador).keyup(function () {
-                var rex = new RegExp($(this).val(),'i');
-                $('#resultadoB div').hide();
-                $('#resultadoB div').filter(function () {
-           
-   
-                    if (rex.test($(this).text())) {
-                    	return $(this).text()+ $(this).siblings('div').text();
-                    }
-
-                }).show();
-            })
-        }($));
-        // Fin buscador
-
-
-
-
-
-
+    stablishmentDetail(result){
+        
+        $('#ad-st-name').val(result['0'].name);
+        $('#ad-st-address').val(result['0'].address);
+        $('#ad-st-state').val(result['0'].state);
+        $('#ad-st-type').val(result['0'].typeStablishment);
+        if(result['0'].typeStablishment=='1'){
+            $('#ad-st-bussiness-name').val(result['0'].businessName);
+            $('#ad-st-ruc').val(result['0'].RUC); 
+            $('.principal').show();
+        }else{
+            
+            $('.principal').hide();
+        }
+        
     }
-
-
 }
 
 $(document).ready(function(){
 
 	var stablishment = new Stablishment;
 
-	// filtro por palabras
-	 var buscador = "buscador";
-     stablishment.searchKeySta(buscador);
+	// filtro por nombre
+     stablishment.searchAttr('buscador','ad-st-item','searchName');
+
 
     //codigo de establecimientos
      $(".ad-st-item").click(function(){
         $(".ad-st-item").removeClass("ad-st-item-active");
         $(this).addClass("ad-st-item-active");
         var stablishmentId=this.id;
-        alert(stablishmentId);
+        stablishment.recuperarDatos(stablishmentId,'admin/stablisment',function(result){
+            stablishment.stablishmentDetail(result);
+        });
+        
     });
 
 
