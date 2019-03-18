@@ -94,7 +94,7 @@
 			     </li>
 
 			     <li class="nav-item {{ isset($itemSecurity) ? $itemSecurity:"" }}">
-			        <a class="nav-link cont-img-header hover-item" href="#" title="SEGURIDAD">
+			        <a class="nav-link cont-img-header hover-item" href="/admin/security" title="SEGURIDAD">
 			        	<img src="{{ asset('img_sist/botones/seguridad.png') }}">
 			        	<label class="text-white"> Seguridad</label>
 			        </a>

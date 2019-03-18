@@ -26,6 +26,7 @@ Route::get('/admin/user/userlist/{id}','adminUser@userList');
 Route::get('/admin/product','adminProduct@index');
 Route::get('/admin/cate','adminCategory@index');
 Route::get('/admin/factura', 'adminBilling@index');
+Route::get('/admin/security', 'adminSecurity@index');
 Route::get('/admin/product/productdetail/{id}','adminProduct@productList');
 //ruta admin-stablisment
 Route::get('/admin/stablisment','adminStablishment@index');
